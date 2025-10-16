@@ -1,0 +1,36 @@
+@startuml
+left to right direction
+
+actor "Администратор" as Admin
+actor "Секретарь" as Secretary
+actor "Зритель" as Viewer
+
+usecase "Управление пользователями" as UC1
+usecase "Управление справочниками" as UC2
+usecase "Управление судьями" as UC3
+usecase "Формирование отчетов" as UC4
+usecase "Полное управление соревнованиями" as UC5
+usecase "Управление участниками и командами" as UC6
+usecase "Регистрация участников на соревнование" as UC7
+usecase "Формирование расписания" as UC8
+usecase "Ввод результатов" as UC9
+usecase "Формирование протоколов" as UC10
+usecase "Просмотр соревнований и результатов" as UC11
+
+Admin --> UC1
+Admin --> UC2
+Admin --> UC3
+Admin --> UC4
+Admin --> UC5
+Admin --> UC6
+Admin --> UC11
+
+Secretary --> UC7
+Secretary --> UC8
+Secretary --> UC9
+Secretary --> UC10
+Secretary --> UC11
+
+Viewer --> UC11
+
+@enduml
